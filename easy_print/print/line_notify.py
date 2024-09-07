@@ -1,7 +1,7 @@
 from .print import Print
 from pathlib import Path
 
-class LIneNotify(Print):
+class LineNotify(Print):
     def __init__(self, token: str):
         self.token = token
 
