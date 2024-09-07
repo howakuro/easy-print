@@ -1,4 +1,4 @@
 from .print import *
-from .discord import *
-from .line_notify import *
-from .stdio import *
+from .print_discord import *
+from .print_line_notify import *
+from .print_stdio import *

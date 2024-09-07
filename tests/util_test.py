@@ -1,6 +1,5 @@
 import sys
 import io
-import unittest
 
 
 def stub_stdin(testcase_inst, inputs):

@@ -1,9 +1,10 @@
 from .print import Print
 from pathlib import Path
 
-class LineNotify(Print):
+
+class PrintLineNotify(Print):
     def __init__(self, token: str):
         self.token = token
 
-    def print(self, message: str, image: Path = None):
+    def print(self, message: str, image=None):
         pass

@@ -1,11 +1,12 @@
 from .print import Print
 from pathlib import Path
 
-class StdIO(Print):
-    def print(self, message: str, image: Path = None):
+
+class PrintStdIO(Print):
+    def print(self, message: str, image=None):
         """
         標準出力にメッセージを出力します
-        
+
         Parameters
         ----------
         message : str
