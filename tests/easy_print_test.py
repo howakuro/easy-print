@@ -56,6 +56,17 @@ class EasyPrintTest(unittest.TestCase):
         with open(self.IMAGE_PATH, "rb") as image_file:
             test.print(self.TEST_DATA, image=image_file)
 
+    def test_line_notify(self):
+        """
+        LineNotifyクラスが正常に動くことを検証する
+        """
+        LINE_NOTIFY_TOKEN = os.environ["LINE_NOTIFY_TOKEN"]
+
+        mock = easy_print.PrintLineNotify(LINE_NOTIFY_TOKEN)
+        test = easy_print.EasyPrint([mock])
+        with open(self.IMAGE_PATH, "rb") as image_file:
+            test.print(self.TEST_DATA, image=image_file)
+
 
 class MockPrint(easy_print.Print):
     def print(self, message: str, image: Path = None):
