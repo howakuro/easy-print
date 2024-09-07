@@ -3,7 +3,7 @@ import unittest
 import easy_print
 import sys
 import dotenv
-from tests.util_test import stub_stdouts, stub_stdin
+from tests.util_test import mock_stdout
 from pathlib import Path
 
 dotenv.load_dotenv("../.env")
@@ -36,7 +36,7 @@ class EasyPrintTest(unittest.TestCase):
         """
         StdIOクラスが正常に動くことを検証する
         """
-        stub_stdouts(self)
+        mock_stdout(self)
 
         mock = easy_print.PrintStdIO()
         test = easy_print.EasyPrint([mock])
