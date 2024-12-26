@@ -182,3 +182,6 @@ pyrightconfig.json
 data
 profile
 screenshot
+
+# TestData
+testdata
